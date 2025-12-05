@@ -64,7 +64,7 @@ Une application web moderne qui aide les utilisateurs à prévenir les blessures
 1. **Cloner le dépôt** :
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/TheMathys/decathlon-poste-ndi
 cd decathlon
 ```
 
