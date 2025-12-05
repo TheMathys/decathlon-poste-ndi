@@ -1,0 +1,133 @@
+{
+  "qcm": [
+    {
+      "id": "q1",
+      "question": "Quel est ton niveau sportif actuel ?",
+      "type": "single_choice",
+      "options": [
+        { "label": "Débutant", "value": "debutant" },
+        { "label": "Intermédiaire", "value": "intermediaire" },
+        { "label": "Avancé", "value": "avance" }
+      ],
+      "store_as": "identite.niveau_de_base",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "question": "Quel est ton âge ?",
+      "type": "number",
+      "min": 10,
+      "max": 100,
+      "store_as": "identite.age",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "question": "À quelle fréquence t'entraînes-tu par semaine ?",
+      "type": "single_choice",
+      "options": [
+        { "label": "0 fois", "value": "0" },
+        { "label": "1 fois", "value": "1" },
+        { "label": "2-3 fois", "value": "2_3" },
+        { "label": "4 fois ou plus", "value": "4_plus" }
+      ],
+      "store_as": "habitudes.frequence_par_semaine",
+      "required": true
+    },
+    {
+      "id": "q4",
+      "question": "Quels sports pratiques-tu actuellement ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Aucun", "value": "aucun" },
+        { "label": "Musculation", "value": "musculation" },
+        { "label": "Course à pied", "value": "course" },
+        { "label": "Vélo", "value": "velo" },
+        { "label": "Yoga / Pilates", "value": "yoga_pilates" },
+        { "label": "Sports collectifs", "value": "sports_collectifs" },
+        { "label": "Natation", "value": "natation" }
+      ],
+      "store_as": "habitudes.sports_pratiques",
+      "required": true
+    },
+    {
+      "id": "q5",
+      "question": "Quels sont tes principaux objectifs ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Améliorer ma posture", "value": "posture" },
+        { "label": "Renforcer mon corps", "value": "renforcement_musculaire" },
+        { "label": "Gagner en mobilité", "value": "mobilite" },
+        { "label": "Améliorer mon endurance", "value": "endurance" },
+        { "label": "Perdre du poids", "value": "perte_de_poids" },
+        { "label": "Prendre du muscle", "value": "prise_de_muscle" },
+        { "label": "Diminuer mes douleurs", "value": "diminuer_douleurs" },
+        { "label": "Simplement rester en forme", "value": "forme" }
+      ],
+      "store_as": "objectifs",
+      "required": true
+    },
+    {
+      "id": "q6",
+      "question": "As-tu des douleurs ou blessures actuelles ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Aucune", "value": "aucune" },
+        { "label": "Poignets", "value": "douleurs_poignet" },
+        { "label": "Douleurs sévères au genou", "value": "douleurs_genou_severe" },
+        { "label": "Douleurs sévères à la hanche", "value": "douleurs_hanche_severe" },
+        { "label": "Douleurs au genou", "value": "douleurs_genou" },
+        { "label": "Douleurs à la cheville", "value": "douleurs_cheville" },
+        { "label": "Douleurs à l'épaule", "value": "douleurs_epaule" },
+        { "label": "Douleurs lombaires sévères", "value": "douleurs_lombaires_severe" },
+        { "label": "Douleurs lombaires", "value": "douleurs_lombaires" },
+        { "label": "Douleurs cervicales", "value": "douleurs_cervicales" }
+      ],
+      "store_as": "sante_contraintes.douleurs_actuelles",
+      "required": false
+    },
+    {
+      "id": "q7",
+      "question": "As-tu des limitations de mobilité ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Aucune", "value": "aucune" },
+        { "label": "Chevilles", "value": "chevilles" },
+        { "label": "Hanches", "value": "hanches" },
+        { "label": "Épaules", "value": "epaules" },
+        { "label": "Colonne vertébrale", "value": "colonne_vertebrale" }
+      ],
+      "store_as": "sante_contraintes.limitations_mobilite",
+      "required": false
+    },
+    {
+      "id": "q8",
+      "question": "De quel matériel disposes-tu ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Aucun", "value": "aucun" },
+        { "label": "Tapis", "value": "tapis" },
+        { "label": "Haltères", "value": "halteres" },
+        { "label": "Bandes élastiques", "value": "bandes_elastiques" },
+        { "label": "Banc", "value": "banc" },
+        { "label": "Barre de traction", "value": "barre" }
+      ],
+      "store_as": "materiel_disponible",
+      "required": true
+    },
+    {
+      "id": "q9",
+      "question": "Quel type d'exercices préfères-tu ?",
+      "type": "multiple_choice",
+      "options": [
+        { "label": "Poids du corps", "value": "poids_du_corps" },
+        { "label": "Cardio", "value": "cardio" },
+        { "label": "Yoga / Mobilité", "value": "yoga_mobilite" },
+        { "label": "Renforcement musculaire", "value": "renforcement_musculaire" },
+        { "label": "Cross-training", "value": "cross_training" }
+      ],
+      "store_as": "preferences.type_exercice_prefere",
+      "required": true
+    }
+  ]
+}

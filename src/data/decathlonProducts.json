@@ -1,0 +1,144 @@
+[
+  {
+    "id": "tapis-yoga-1",
+    "name": "Tapis de Yoga Domyos",
+    "price": "19,99 €",
+    "image": "https://contents.mediadecathlon.com/p2940271/k$59e73f3bc780d9d6bae3dddb2f4f0958/sq/tapis-de-yoga-debutant-adherence-et-confort-5mm-marron.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/tapis-de-yoga-debutant-adherence-et-confort-5mm-bleu-fonce/_/R-p-360462?mc=8928286&c=marron",
+    "category": "yoga",
+    "description": "Tapis antidérapant pour yoga et pilates",
+    "productId": "5437025",
+    "exerciseCategories": ["yoga_mobilite", "poids_du_corps"],
+    "exerciseIds": [
+      "cat_cow",
+      "child_pose",
+      "cobra_pose",
+      "downward_dog",
+      "pigeon_pose",
+      "warrior_1",
+      "warrior_2"
+    ]
+  },
+  {
+    "id": "bandes-resistance-1",
+    "name": "Bandes de Résistance Domyos",
+    "price": "4,99 €",
+    "image": "https://contents.mediadecathlon.com/p1605054/k$710c5c182a71932c523a2359a4e675dd/sq/kit-x3-elastiques-fitness-resistance-5-6-7-kg-gris-bordeaux-noir.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/kit-x3-elastiques-fitness-resistance-5-6-7-kg-gris-bordeaux-noir/_/R-p-305336?mc=8528803&c=noir_bleu_violet",
+    "category": "resistance",
+    "description": "Set de 3 bandes élastiques de résistance variable",
+    "productId": "2661602",
+    "exerciseCategories": ["renforcement_musculaire"],
+    "exerciseIds": ["squat_base", "lunge_forward", "glute_bridge"]
+  },
+  {
+    "id": "banc-musculation-1",
+    "name": "Banc de Musculation Corength",
+    "price": "149,99 €",
+    "image": "https://contents.mediadecathlon.com/p2686398/k$ae500ba591c5a283872256cce8c4eb9b/sq/banc-de-musculation-renforce-inclinable-et-declinable-bench-900.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/banc-de-musculation-renforce-inclinable-et-declinable-bench-900/_/R-p-342936?mc=8766093",
+    "category": "equipment",
+    "description": "Banc réglable pour musculation à domicile",
+    "productId": "4660463",
+    "exerciseCategories": ["renforcement_musculaire"],
+    "exerciseIds": ["hip_thrust", "pushup_decline", "pushup_incline"]
+  },
+  {
+    "id": "barre-traction-1",
+    "name": "Barre de Traction Domyos",
+    "price": "39,99 €",
+    "image": "https://contents.mediadecathlon.com/p2743669/k$18a1ad27b215415da363a7ce4adb0e49/sq/barre-de-traction-sur-porte-de-musculation.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/barre-de-traction-sur-porte-de-musculation/_/R-p-363508?mc=8938852",
+    "category": "equipment",
+    "description": "Barre de traction ajustable pour porte",
+    "productId": "5513179",
+    "exerciseCategories": ["renforcement_musculaire"],
+    "exerciseIds": ["row_inverted"]
+  },
+  {
+    "id": "chaussures-fitness-1",
+    "name": "Chaussures de Fitness Domyos",
+    "price": "39,99 €",
+    "image": "https://contents.mediadecathlon.com/p2917196/k$84595ff5312ec044a4b9f7431a0eccec/sq/chaussures-de-fitness-et-training-flexibilite-et-stabilite-femme-energy-blanc.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/chaussures-de-fitness-et-training-flexibilite-et-stabilite-femme-energy-blanc/_/R-p-362811?mc=8937433",
+    "category": "footwear",
+    "description": "Chaussures polyvalentes pour fitness et musculation",
+    "productId": "5507067",
+    "exerciseCategories": ["renforcement_musculaire", "cardio"],
+    "exerciseIds": [
+      "squat_base",
+      "squat_sumos",
+      "lunge_forward",
+      "lunge_backward",
+      "jumping_jacks",
+      "burpee"
+    ]
+  },
+  {
+    "id": "gants-fitness-1",
+    "name": "Gants de Fitness Corength",
+    "price": "7,99 €",
+    "image": "https://contents.mediadecathlon.com/p2832338/k$22580536d8ffbfaa82e70415c7ec8e37/sq/gants-de-fitness-respirants-et-resistants-violet-et-noir.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/gants-de-fitness-respirants-et-resistants-vert-fonce-et-noir/_/R-p-354770?mc=8882093&c=noir_violet_orange",
+    "category": "accessories",
+    "description": "Gants avec paume renforcée pour pompes et tractions",
+    "productId": "5205593",
+    "exerciseCategories": ["renforcement_musculaire"],
+    "exerciseIds": [
+      "pushup_basic",
+      "pushup_knees",
+      "pushup_decline",
+      "pushup_incline",
+      "plank",
+      "row_inverted"
+    ]
+  },
+  {
+    "id": "bouteille-eau-1",
+    "name": "Gourde Sport Quechua",
+    "price": "9,99 €",
+    "image": "https://contents.mediadecathlon.com/p2902215/k$0fe8a050e2f25b32bdb6a2b2d832fbda/sq/gourde-500-alu-1l-avec-bouchon-ouverture-rapide-pour-la-randonnee-bleu.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/gourde-500-alu-1l-avec-bouchon-ouverture-rapide-pour-la-randonnee-bleu/_/R-p-330041?mc=8612536",
+    "category": "accessories",
+    "description": "Gourde isotherme 750ml pour rester hydraté",
+    "productId": "4197016",
+    "exerciseCategories": ["renforcement_musculaire", "cardio", "yoga_mobilite"],
+    "exerciseIds": []
+  },
+  {
+    "id": "serviette-sport-1",
+    "name": "Serviette de Sport Domyos",
+    "price": "6,99 €",
+    "image": "https://contents.mediadecathlon.com/p2866723/k$baa146f025736cad296a9978db43040a/sq/serviette-de-fitness-en-coton-90x50-cm-noir.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/serviette-de-fitness-en-coton-90x50-cm-gris/_/R-p-170251?mc=8379823&c=noir",
+    "category": "accessories",
+    "description": "Serviette microfibre rapide séchage",
+    "productId": "2171984",
+    "exerciseCategories": ["renforcement_musculaire", "cardio", "yoga_mobilite"],
+    "exerciseIds": []
+  },
+  {
+    "id": "haltères-ajustables-1",
+    "name": "Haltères Ajustables Corength",
+    "price": "49,99 €",
+    "image": "https://contents.mediadecathlon.com/p2599290/k$a0f24e15abaf3f5be0cd667889c26627/sq/kit-dhalteres-de-musculation-20-kg-avec-disques-en-fonte-a-80-recyclee.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/kit-d-halteres-de-musculation-20-kg-avec-disques-en-fonte-a-80-percent-recyclee/_/R-p-7449?mc=8018574&c=noir",
+    "category": "equipment",
+    "description": "Set d'haltères ajustables 2x10kg",
+    "productId": "411314",
+    "exerciseCategories": ["renforcement_musculaire"],
+    "exerciseIds": ["squat_base", "lunge_forward", "pushup_basic"]
+  },
+  {
+    "id": "rouleau-massage-1",
+    "name": "Rouleau de Massage Domyos",
+    "price": "19,99 €",
+    "image": "https://contents.mediadecathlon.com/p2784414/k$11041bffa72095b0ab17590c499f6cfd/sq/rouleau-en-mousse-de-pilates-longueur-38-cm-diametre-13-cm-foam-roller-violet.jpg?format=auto&f=480x480",
+    "link": "https://www.decathlon.fr/p/rouleau-en-mousse-de-pilates-longueur-38-cm-diametre-13-cm-foam-roller-violet/_/R-p-358115?mc=8912837",
+    "category": "accessories",
+    "description": "Rouleau de massage pour récupération musculaire",
+    "productId": "5350430",
+    "exerciseCategories": ["yoga_mobilite"],
+    "exerciseIds": []
+  }
+]

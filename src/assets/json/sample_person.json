@@ -1,0 +1,22 @@
+{
+  "identite": {
+    "niveau_de_base": null,
+    "age": null
+  },
+  "habitudes": {
+    "frequence_par_semaine": null,
+    "sports_pratiques": []
+  },
+  "objectifs": [],
+  "sante_contraintes": {
+    "douleurs_actuelles": [],
+    "limitations_mobilite": []
+  },
+  "materiel_disponible": [],
+  "preferences": {
+    "type_exercice_prefere": []
+  },
+  "consentement_legal": {
+    "acceptance_disclaimer": false
+  }
+}

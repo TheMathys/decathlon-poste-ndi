@@ -1,0 +1,382 @@
+[
+  {
+    "id": "squat_base",
+    "name": "Squat au poids du corps",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "posture", "forme"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_genou_severe"],
+    "description": "Placez vos pieds à la largeur des épaules, dos droit. Pliez les genoux pour descendre comme si vous alliez vous asseoir, puis remontez. Muscles sollicités : quadriceps, fessiers, ischio-jambiers. Gardez le dos droit, genoux alignés avec les pieds. Version facile : descendre moins bas ; version difficile : ajouter un saut à la remontée. Inspirez en descendant, expirez en remontant."
+  },
+  {
+    "id": "squat_sumos",
+    "name": "Squat Sumo",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "mobilite", "prise_de_muscle"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_hanche_severe"],
+    "description": "Écartez vos pieds plus largement que les épaules, pointes légèrement vers l'extérieur. Descendez en squat en gardant le dos droit et les genoux dans l'alignement des pieds, puis remontez. Muscles sollicités : quadriceps, fessiers, adducteurs. Version facile : ne pas descendre trop bas ; version difficile : ajouter un poids. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "squat_wall",
+    "name": "Wall Sit (chaise contre mur)",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["endurance", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Appuyez votre dos contre un mur et glissez jusqu'à ce que vos genoux soient à 90°. Maintenez la position. Muscles sollicités : quadriceps, fessiers. Gardez le dos bien collé au mur. Version facile : remonter légèrement ; version difficile : tenir plus longtemps. Respirez profondément et régulièrement."
+  },
+  {
+    "id": "squat_jump",
+    "name": "Squat Jump",
+    "categories": ["cardio", "cross_training"],
+    "objectifs_cibles": ["cardio", "perte_de_poids", "endurance"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_genou", "douleurs_cheville"],
+    "description": "Effectuez un squat puis sautez verticalement en poussant sur vos jambes. Atterrissez doucement et recommencez. Muscles sollicités : quadriceps, fessiers, mollets. Gardez le dos droit et amortissez l'atterrissage. Version facile : squat sans saut ; version difficile : saut plus explosif. Inspirez en descendant, expirez en sautant."
+  },
+  {
+    "id": "lunge_forward",
+    "name": "Fentes avant",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "posture"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_genou"],
+    "description": "Avancez un pied et pliez les deux genoux jusqu'à 90°, puis poussez sur la jambe avant pour revenir. Muscles sollicités : quadriceps, fessiers, ischio-jambiers. Gardez le buste droit et le genou avant aligné avec le pied. Version facile : faire moins de profondeur ; version difficile : ajouter un saut ou un poids. Inspirez en descendant, expirez en remontant."
+  },
+  {
+    "id": "lunge_backward",
+    "name": "Fentes arrière",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["posture", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_genou"],
+    "description": "Reculez un pied et pliez les deux genoux à 90°, puis revenez à la position de départ. Muscles sollicités : quadriceps, fessiers, ischio-jambiers. Gardez le buste droit et le genou avant aligné avec le pied. Version facile : descendre moins bas ; version difficile : ajouter un poids. Inspirez en descendant, expirez en remontant."
+  },
+  {
+    "id": "lateral_lunge",
+    "name": "Fente latérale",
+    "categories": ["renforcement_musculaire", "mobilite", "poids_du_corps"],
+    "objectifs_cibles": ["mobilite", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": [],
+    "description": "Écartez une jambe sur le côté et pliez le genou, en gardant l'autre jambe tendue. Revenez au centre et changez de côté. Muscles sollicités : quadriceps, fessiers, adducteurs. Gardez le dos droit et le pied à plat. Version facile : moins profond ; version difficile : ajouter un poids. Inspirez en descendant, expirez en revenant."
+  },
+  {
+    "id": "glute_bridge",
+    "name": "Pont fessier (Glute Bridge)",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["posture", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Allongé sur le dos, pieds à plat, soulevez les hanches en serrant les fessiers, puis redescendez doucement. Muscles sollicités : fessiers, ischio-jambiers, lombaires. Version facile : lever moins haut ; version difficile : maintenir plus longtemps ou ajouter un poids. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "hip_thrust",
+    "name": "Hip Thrust",
+    "categories": ["renforcement_musculaire"],
+    "objectifs_cibles": ["prise_de_muscle", "renforcement_musculaire"],
+    "materiel": ["banc"],
+    "niveau": "intermediaire",
+    "contre_indications": [],
+    "description": "Dos appuyé sur un banc, pieds au sol, soulevez les hanches en contractant les fessiers et redescendez. Muscles sollicités : fessiers, ischio-jambiers, lombaires. Gardez le menton légèrement rentré. Version facile : sans poids ; version difficile : ajouter une barre ou haltère. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "pushup_basic",
+    "name": "Pompes classiques",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "prise_de_muscle"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_poignet"],
+    "description": "Placez vos mains au sol, écartées à la largeur des épaules, corps droit. Pliez les coudes pour descendre et poussez pour remonter. Muscles sollicités : pectoraux, triceps, deltoïdes, abdos. Version facile : sur les genoux ; version difficile : pieds surélevés ou poids supplémentaires. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "pushup_knees",
+    "name": "Pompes sur les genoux",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "forme"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Placez vos mains au sol, genoux posés, corps droit. Pliez les coudes pour descendre et remontez. Muscles sollicités : pectoraux, triceps, deltoïdes. Version facile : bras plus écartés ; version difficile : pompes classiques. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "pushup_decline",
+    "name": "Pompes déclinées",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "prise_de_muscle"],
+    "materiel": ["banc"],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_epaule"],
+    "description": "Pieds surélevés sur un banc, mains au sol, corps droit. Descendez en pliant les coudes et remontez. Muscles sollicités : pectoraux, triceps, deltoïdes. Version facile : réduire la hauteur ; version difficile : ajouter un poids. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "pushup_incline",
+    "name": "Pompes inclinées",
+    "categories": ["renforcement_musculaire", "poids_du_corps"],
+    "objectifs_cibles": ["posture", "renforcement_musculaire"],
+    "materiel": ["banc"],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Mains sur un banc, pieds au sol, corps droit. Pliez les coudes pour descendre et remontez. Muscles sollicités : pectoraux, triceps, deltoïdes. Version facile : banc plus haut ; version difficile : banc plus bas ou poids supplémentaires. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "row_inverted",
+    "name": "Tractions horizontales (Inverted Row)",
+    "categories": ["renforcement_musculaire"],
+    "objectifs_cibles": ["renforcement_musculaire", "posture"],
+    "materiel": ["barre"],
+    "niveau": "intermediaire",
+    "contre_indications": [],
+    "description": "Allongé sous une barre, saisissez-la et tirez votre poitrine vers la barre en gardant le corps droit, puis redescendez. Muscles sollicités : dos, biceps, trapèzes. Version facile : barre plus haute ; version difficile : pieds surélevés ou poids. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "superman",
+    "name": "Superman",
+    "categories": ["poids_du_corps", "renforcement_musculaire"],
+    "objectifs_cibles": ["posture", "diminuer_douleurs"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_lombaires_severe"],
+    "description": "Allongé sur le ventre, levez simultanément bras et jambes, maintenez, puis redescendez. Muscles sollicités : lombaires, fessiers, épaules. Version facile : lever bras ou jambes séparément ; version difficile : maintenir plus longtemps. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "bird_dog",
+    "name": "Bird Dog",
+    "categories": ["poids_du_corps", "yoga_mobilite"],
+    "objectifs_cibles": ["posture", "diminuer_douleurs", "mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "À quatre pattes, étendez simultanément bras droit et jambe gauche, maintenez, puis changez de côté. Muscles sollicités : lombaires, fessiers, abdos. Version facile : lever bras ou jambe séparément ; version difficile : maintenir plus longtemps. Inspirez en étendant, expirez en revenant."
+  },
+  {
+    "id": "dead_bug",
+    "name": "Dead Bug",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["posture", "diminuer_douleurs"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Allongé sur le dos, bras tendus vers le plafond, alternez l'abaissement d'un bras et de la jambe opposée, puis revenez. Muscles sollicités : abdos, lombaires. Version facile : abaisser moins loin ; version difficile : maintenir jambes plus tendues. Inspirez en descendant, expirez en remontant."
+  },
+  {
+    "id": "plank",
+    "name": "Planche (Plank)",
+    "categories": ["poids_du_corps", "renforcement_musculaire"],
+    "objectifs_cibles": ["posture", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_lombaires_severe"],
+    "description": "En appui sur les avant-bras et les pointes de pieds, corps droit, maintenez la position. Muscles sollicités : abdos, lombaires, épaules. Version facile : genoux au sol ; version difficile : lever un bras ou une jambe. Respirez régulièrement."
+  },
+  {
+    "id": "side_plank",
+    "name": "Gainage latéral",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["posture", "renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": [],
+    "description": "Allongé sur le côté, appui sur un avant-bras, corps droit, maintenez. Muscles sollicités : obliques, abdos, épaules. Version facile : genou au sol ; version difficile : lever jambe supérieure. Respirez régulièrement."
+  },
+  {
+    "id": "hollow_hold",
+    "name": "Hollow Hold",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "posture"],
+    "materiel": [],
+    "niveau": "avance",
+    "contre_indications": ["douleurs_lombaires"],
+    "description": "Allongé sur le dos, soulevez bras et jambes du sol, creusez le dos légèrement et maintenez. Muscles sollicités : abdos, lombaires. Version facile : plier les jambes ; version difficile : jambes tendues. Inspirez profondément."
+  },
+  {
+    "id": "mountain_climbers",
+    "name": "Mountain Climbers",
+    "categories": ["cardio", "poids_du_corps"],
+    "objectifs_cibles": ["cardio", "perte_de_poids", "endurance"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_poignet"],
+    "description": "En position de pompe, ramenez alternativement les genoux vers la poitrine rapidement. Muscles sollicités : abdos, épaules, jambes. Version facile : plus lent ; version difficile : plus rapide ou sauté. Inspirez et expirez régulièrement."
+  },
+  {
+    "id": "burpee",
+    "name": "Burpee",
+    "categories": ["cardio", "cross_training"],
+    "objectifs_cibles": ["cardio", "perte_de_poids"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_genou"],
+    "description": "Descendez en squat, posez les mains au sol, sautez en position de planche, revenez au squat et sautez verticalement. Muscles sollicités : jambes, abdos, bras. Version facile : sans saut final ; version difficile : plus rapide ou avec pompe. Inspirez en descendant, expirez en sautant."
+  },
+  {
+    "id": "jumping_jacks",
+    "name": "Jumping Jacks",
+    "categories": ["cardio"],
+    "objectifs_cibles": ["cardio", "endurance"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Debout, sautez en écartant les jambes et bras, puis revenez. Muscles sollicités : jambes, épaules. Version facile : plus lent ; version difficile : plus rapide. Inspirez et expirez régulièrement."
+  },
+  {
+    "id": "cat_cow",
+    "name": "Chat-Vache",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite", "diminuer_douleurs"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "À quatre pattes, alternez cambrer le dos en regardant le plafond et arrondir le dos en regardant le nombril. Muscles sollicités : colonne vertébrale, abdos, dorsaux. Version facile : mouvements plus lents ; version difficile : tenir quelques secondes. Respirez avec le mouvement."
+  },
+  {
+    "id": "child_pose",
+    "name": "Posture de l’enfant (Balasana)",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["diminuer_douleurs", "mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "À genoux, penchez le buste vers l’avant, bras étendus ou le long du corps. Muscles sollicités : dos, hanches. Version facile : bras le long ; version difficile : bras étendus. Respirez profondément."
+  },
+  {
+    "id": "cobra_pose",
+    "name": "Cobra",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite", "posture"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_lombaires"],
+    "description": "Allongé sur le ventre, mains sous les épaules, relevez le buste en cambrant le dos. Muscles sollicités : lombaires, poitrine, épaules. Version facile : ne pas lever trop haut ; version difficile : maintenir plus longtemps. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "downward_dog",
+    "name": "Chien tête en bas",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite", "posture"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_poignet"],
+    "description": "À quatre pattes, levez les hanches vers le plafond, talons vers le sol, bras tendus. Muscles sollicités : épaules, dos, jambes. Version facile : genoux légèrement pliés ; version difficile : talons au sol. Inspirez et expirez profondément."
+  },
+  {
+    "id": "pigeon_pose",
+    "name": "Posture du Pigeon",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite", "diminuer_douleurs"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_genou"],
+    "description": "Une jambe pliée devant, l’autre tendue derrière, buste droit ou penché. Muscles sollicités : hanches, fessiers. Version facile : buste droit ; version difficile : penché vers l’avant. Respirez profondément."
+  },
+  {
+    "id": "warrior_1",
+    "name": "Guerrier 1",
+    "categories": ["yoga_mobilite", "poids_du_corps"],
+    "objectifs_cibles": ["posture", "mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Jambe avant pliée, jambe arrière tendue, bras levés au-dessus de la tête. Muscles sollicités : jambes, fessiers, bras. Version facile : moins profond ; version difficile : tenir plus longtemps. Respirez régulièrement."
+  },
+  {
+    "id": "warrior_2",
+    "name": "Guerrier 2",
+    "categories": ["yoga_mobilite", "poids_du_corps"],
+    "objectifs_cibles": ["mobilite", "forme"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Jambe avant pliée, jambe arrière tendue, bras tendus de chaque côté, regard vers l'avant. Muscles sollicités : jambes, fessiers, bras. Version facile : moins profond ; version difficile : tenir plus longtemps. Respirez régulièrement."
+  },
+  {
+    "id": "shoulder_bridge",
+    "name": "Shoulder Bridge (Pilates)",
+    "categories": ["yoga_mobilite", "poids_du_corps"],
+    "objectifs_cibles": ["posture", "mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Allongé sur le dos, pieds au sol, soulevez le bassin en contractant les fessiers, puis redescendez. Muscles sollicités : fessiers, lombaires. Version facile : lever moins haut ; version difficile : maintenir plus longtemps. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "leg_raise",
+    "name": "Relevé de jambes",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_lombaires"],
+    "description": "Allongé sur le dos, jambes tendues, levez-les à 90° puis redescendez sans toucher le sol. Muscles sollicités : abdos, hanches. Version facile : plier les genoux ; version difficile : maintenir jambes tendues plus longtemps. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "crunch",
+    "name": "Crunch",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire", "prise_de_muscle"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": ["douleurs_cervicales"],
+    "description": "Allongé sur le dos, pieds au sol, relevez le buste vers les genoux en contractant les abdos, puis redescendez. Muscles sollicités : abdos. Version facile : mains derrière la tête sans tirer ; version difficile : ajouter un poids. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "russian_twist",
+    "name": "Russian Twist",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "intermediaire",
+    "contre_indications": ["douleurs_lombaires"],
+    "description": "Assis, genoux fléchis, inclinez légèrement le buste en arrière et tournez le tronc de gauche à droite. Muscles sollicités : abdos, obliques. Version facile : pieds au sol ; version difficile : pieds levés ou poids. Inspirez régulièrement."
+  },
+  {
+    "id": "calf_raise",
+    "name": "Élévation de mollets",
+    "categories": ["poids_du_corps"],
+    "objectifs_cibles": ["renforcement_musculaire"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Debout, montez sur la pointe des pieds puis redescendez. Muscles sollicités : mollets. Version facile : avec appui ; version difficile : sur un rebord pour plus d'amplitude. Inspirez en descendant, expirez en montant."
+  },
+  {
+    "id": "hip_opener",
+    "name": "Hip Opener Stretch",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Assis ou debout, ouvrez et fermez les hanches doucement pour étirer. Muscles sollicités : hanches, adducteurs. Version facile : mouvements plus petits ; version difficile : maintenir l'étirement plus longtemps. Respirez profondément."
+  },
+  {
+    "id": "thoracic_rotation",
+    "name": "Rotation thoracique",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite", "posture"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "À quatre pattes, placez une main derrière la tête et tournez le tronc vers le plafond puis revenez. Muscles sollicités : dos, thorax. Version facile : rotation moins large ; version difficile : tenir en rotation. Respirez profondément."
+  },
+  {
+    "id": "ankle_mobility",
+    "name": "Mobilité de cheville",
+    "categories": ["yoga_mobilite"],
+    "objectifs_cibles": ["mobilite"],
+    "materiel": [],
+    "niveau": "debutant",
+    "contre_indications": [],
+    "description": "Assis ou debout, faites des cercles avec la cheville ou poussez doucement le pied vers l'avant et l'arrière. Muscles sollicités : mollets, chevilles. Version facile : mouvements plus petits ; version difficile : mouvements plus larges. Respirez régulièrement."
+  }
+]
