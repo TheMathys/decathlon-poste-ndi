@@ -12,7 +12,6 @@ interface ExerciseCardProps {
 }
 
 const ExerciseCard: React.FC<ExerciseCardProps> = ({ exercise, profile, index }) => {
-
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
       <ExerciseHeader exercise={exercise} index={index} />
@@ -36,9 +35,7 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ exercise, profile, index })
             collapsed: "Voir les instructions personnalisées",
           }}
           className="mt-4"
-          ariaLabel={
-            "Afficher ou masquer les instructions personnalisées pour cet exercice"
-          }
+          ariaLabel={"Afficher ou masquer les instructions personnalisées pour cet exercice"}
         >
           <PersonalizedInstructions
             exercise={exercise}

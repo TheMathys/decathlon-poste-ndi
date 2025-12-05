@@ -38,11 +38,7 @@ export const MultipleChoiceField: React.FC<MultipleChoiceFieldProps> = ({
       >
         {question.question}
       </legend>
-      <div
-        className="decathlon-checkbox-group"
-        role="group"
-        aria-required={question.required}
-      >
+      <div className="decathlon-checkbox-group" role="group" aria-required={question.required}>
         {question.options?.map((option, optIndex) => {
           const isChecked = selectedValues.includes(option.value);
           return (
@@ -77,4 +73,3 @@ export const MultipleChoiceField: React.FC<MultipleChoiceFieldProps> = ({
     </fieldset>
   );
 };
-

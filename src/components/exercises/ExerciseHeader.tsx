@@ -8,17 +8,19 @@ interface ExerciseHeaderProps {
 }
 
 export const ExerciseHeader: React.FC<ExerciseHeaderProps> = ({ exercise, index }) => {
-  const niveauBadgeColor = {
-    debutant: "success" as const,
-    intermediaire: "warning" as const,
-    avance: "danger" as const,
-  }[exercise.niveau] || "default";
+  const niveauBadgeColor =
+    {
+      debutant: "success" as const,
+      intermediaire: "warning" as const,
+      avance: "danger" as const,
+    }[exercise.niveau] || "default";
 
-  const niveauLabel = {
-    debutant: "Débutant",
-    intermediaire: "Intermédiaire",
-    avance: "Avancé",
-  }[exercise.niveau] || exercise.niveau;
+  const niveauLabel =
+    {
+      debutant: "Débutant",
+      intermediaire: "Intermédiaire",
+      avance: "Avancé",
+    }[exercise.niveau] || exercise.niveau;
 
   return (
     <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -41,4 +43,3 @@ export const ExerciseHeader: React.FC<ExerciseHeaderProps> = ({ exercise, index 
     </div>
   );
 };
-

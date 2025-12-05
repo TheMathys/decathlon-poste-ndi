@@ -6,20 +6,10 @@ interface ErrorMessageProps {
   className?: string;
 }
 
-export const ErrorMessage: React.FC<ErrorMessageProps> = ({
-  id,
-  message,
-  className = "",
-}) => {
+export const ErrorMessage: React.FC<ErrorMessageProps> = ({ id, message, className = "" }) => {
   return (
-    <div
-      id={id}
-      className={`decathlon-error ${className}`}
-      role="alert"
-      aria-live="polite"
-    >
+    <div id={id} className={`decathlon-error ${className}`} role="alert" aria-live="polite">
       {message}
     </div>
   );
 };
-

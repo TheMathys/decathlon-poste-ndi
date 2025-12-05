@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
-import type { ProgrammedExercise, TrainingSession as TrainingSessionType } from "../../types/index.js";
+import type {
+  ProgrammedExercise,
+  TrainingSession as TrainingSessionType,
+} from "../../types/index.js";
 import { Button } from "../shared/ui/Button";
 
 interface TrainingSessionProps {
@@ -10,12 +13,26 @@ interface TrainingSessionProps {
 
 const COACH_MESSAGES = {
   warmup: ["Échauffez-vous bien !", "Préparez votre corps à l'effort", "Respirez profondément"],
-  exercise: ["Allez-y !", "Vous pouvez le faire !", "Concentrez-vous sur la forme", "Excellent travail !"],
-  rest: ["Reposez-vous bien", "Profitez de cette pause", "Respirez calmement", "Préparez-vous pour la suite"],
+  exercise: [
+    "Allez-y !",
+    "Vous pouvez le faire !",
+    "Concentrez-vous sur la forme",
+    "Excellent travail !",
+  ],
+  rest: [
+    "Reposez-vous bien",
+    "Profitez de cette pause",
+    "Respirez calmement",
+    "Préparez-vous pour la suite",
+  ],
   completed: ["Félicitations !", "Vous avez terminé !", "Excellent travail aujourd'hui !"],
 };
 
-export const TrainingSession: React.FC<TrainingSessionProps> = ({ exercises, onComplete, onCancel }) => {
+export const TrainingSession: React.FC<TrainingSessionProps> = ({
+  exercises,
+  onComplete,
+  onCancel,
+}) => {
   const [session, setSession] = useState<TrainingSessionType>({
     currentExerciseIndex: 0,
     currentSet: 1,
@@ -30,87 +47,100 @@ export const TrainingSession: React.FC<TrainingSessionProps> = ({ exercises, onC
 
   const currentExercise = exercises[session.currentExerciseIndex];
 
-  const handleTimeUp = useCallback((prev: TrainingSessionType): TrainingSessionType => {
-    if (prev.state === "warmup") {
-      // Passer au premier exercice
-      const firstExercise = exercises[0];
-      if (!firstExercise) return prev;
-      
-      const reps = firstExercise.sets.reps;
-      const timeForReps = typeof reps === "string" ? parseInt(reps) || 30 : reps * 2;
-      
-      setCoachMessage(COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]);
-      
-      return {
-        ...prev,
-        state: "exercise",
-        currentExerciseIndex: 0,
-        currentSet: 1,
-        timeRemaining: timeForReps,
-      };
-    } else if (prev.state === "exercise") {
-      const currentEx = exercises[prev.currentExerciseIndex];
-      if (!currentEx) return prev;
-      
-      const isLastSetForCurrent = prev.currentSet >= currentEx.sets.sets;
-      const isLastExerciseForCurrent = prev.currentExerciseIndex >= exercises.length - 1;
-      
-      // Passer au repos ou à la série suivante
-      if (isLastSetForCurrent && isLastExerciseForCurrent) {
-        // Dernier exercice terminé
-        setCoachMessage(COACH_MESSAGES.completed[Math.floor(Math.random() * COACH_MESSAGES.completed.length)]);
-        return {
-          ...prev,
-          state: "completed",
-          timeRemaining: 0,
-          completedExercises: [...prev.completedExercises, currentEx.id],
-        };
-      } else if (isLastSetForCurrent) {
-        // Passer à l'exercice suivant
-        const nextExercise = exercises[prev.currentExerciseIndex + 1];
-        if (!nextExercise) return prev;
-        
-        const reps = nextExercise.sets.reps;
+  const handleTimeUp = useCallback(
+    (prev: TrainingSessionType): TrainingSessionType => {
+      if (prev.state === "warmup") {
+        // Passer au premier exercice
+        const firstExercise = exercises[0];
+        if (!firstExercise) return prev;
+
+        const reps = firstExercise.sets.reps;
         const timeForReps = typeof reps === "string" ? parseInt(reps) || 30 : reps * 2;
-        
-        setCoachMessage(COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]);
-        
+
+        setCoachMessage(
+          COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]
+        );
+
         return {
           ...prev,
-          currentExerciseIndex: prev.currentExerciseIndex + 1,
+          state: "exercise",
+          currentExerciseIndex: 0,
           currentSet: 1,
           timeRemaining: timeForReps,
-          completedExercises: [...prev.completedExercises, currentEx.id],
         };
-      } else {
-        // Repos entre séries
-        setCoachMessage(COACH_MESSAGES.rest[Math.floor(Math.random() * COACH_MESSAGES.rest.length)]);
+      } else if (prev.state === "exercise") {
+        const currentEx = exercises[prev.currentExerciseIndex];
+        if (!currentEx) return prev;
+
+        const isLastSetForCurrent = prev.currentSet >= currentEx.sets.sets;
+        const isLastExerciseForCurrent = prev.currentExerciseIndex >= exercises.length - 1;
+
+        // Passer au repos ou à la série suivante
+        if (isLastSetForCurrent && isLastExerciseForCurrent) {
+          // Dernier exercice terminé
+          setCoachMessage(
+            COACH_MESSAGES.completed[Math.floor(Math.random() * COACH_MESSAGES.completed.length)]
+          );
+          return {
+            ...prev,
+            state: "completed",
+            timeRemaining: 0,
+            completedExercises: [...prev.completedExercises, currentEx.id],
+          };
+        } else if (isLastSetForCurrent) {
+          // Passer à l'exercice suivant
+          const nextExercise = exercises[prev.currentExerciseIndex + 1];
+          if (!nextExercise) return prev;
+
+          const reps = nextExercise.sets.reps;
+          const timeForReps = typeof reps === "string" ? parseInt(reps) || 30 : reps * 2;
+
+          setCoachMessage(
+            COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]
+          );
+
+          return {
+            ...prev,
+            currentExerciseIndex: prev.currentExerciseIndex + 1,
+            currentSet: 1,
+            timeRemaining: timeForReps,
+            completedExercises: [...prev.completedExercises, currentEx.id],
+          };
+        } else {
+          // Repos entre séries
+          setCoachMessage(
+            COACH_MESSAGES.rest[Math.floor(Math.random() * COACH_MESSAGES.rest.length)]
+          );
+          return {
+            ...prev,
+            state: "rest",
+            currentSet: prev.currentSet + 1,
+            timeRemaining: currentEx.sets.restSeconds,
+          };
+        }
+      } else if (prev.state === "rest") {
+        // Reprendre l'exercice
+        const currentEx = exercises[prev.currentExerciseIndex];
+        if (!currentEx) return prev;
+
+        const reps = currentEx.sets.reps;
+        const timeForReps = typeof reps === "string" ? parseInt(reps) || 30 : reps * 2;
+
+        setCoachMessage(
+          COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]
+        );
+
         return {
           ...prev,
-          state: "rest",
-          currentSet: prev.currentSet + 1,
-          timeRemaining: currentEx.sets.restSeconds,
+          state: "exercise",
+          timeRemaining: timeForReps,
         };
       }
-    } else if (prev.state === "rest") {
-      // Reprendre l'exercice
-      const currentEx = exercises[prev.currentExerciseIndex];
-      if (!currentEx) return prev;
-      
-      const reps = currentEx.sets.reps;
-      const timeForReps = typeof reps === "string" ? parseInt(reps) || 30 : reps * 2;
-      
-      setCoachMessage(COACH_MESSAGES.exercise[Math.floor(Math.random() * COACH_MESSAGES.exercise.length)]);
-      
-      return {
-        ...prev,
-        state: "exercise",
-        timeRemaining: timeForReps,
-      };
-    }
 
-    return prev;
-  }, [exercises]);
+      return prev;
+    },
+    [exercises]
+  );
 
   useEffect(() => {
     if (isPaused || session.state === "completed") return;
@@ -146,8 +176,18 @@ export const TrainingSession: React.FC<TrainingSessionProps> = ({ exercises, onC
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50 p-4">
         <div className="max-w-2xl w-full bg-white rounded-xl shadow-xl p-8 text-center">
           <div className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            <svg
+              className="w-12 h-12 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
             </svg>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{coachMessage}</h2>
@@ -175,7 +215,7 @@ export const TrainingSession: React.FC<TrainingSessionProps> = ({ exercises, onC
               Quitter
             </Button>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="flex-1">
               <div className="text-sm text-gray-600 mb-1">Progression</div>
@@ -183,7 +223,17 @@ export const TrainingSession: React.FC<TrainingSessionProps> = ({ exercises, onC
                 <div
                   className="h-full bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-300"
                   style={{
-                    width: `${((session.currentExerciseIndex * currentExercise?.sets.sets + session.currentSet) / (exercises.length * (currentExercise?.sets.sets || 1))) * 100}%`,
+                    width: `${
+                      exercises.length > 0 && currentExercise
+                        ? Math.min(
+                            100,
+                            ((session.currentExerciseIndex * (currentExercise.sets.sets || 1) +
+                              session.currentSet) /
+                              (exercises.length * (currentExercise.sets.sets || 1))) *
+                              100
+                          )
+                        : 0
+                    }%`,
                   }}
                 />
               </div>

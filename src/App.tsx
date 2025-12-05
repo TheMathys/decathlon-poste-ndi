@@ -43,10 +43,13 @@ function App() {
             .map((ex: Exercise) => ({ ...ex, score: 0 }) as ScoredExercise);
 
           if (restoredExercises.length > 0) {
-            setProfile(data.profile as SportProfile);
-            setSuggestions(restoredExercises);
-            setStep("suggestions");
-            window.history.replaceState({}, document.title, window.location.pathname);
+            // Utiliser un callback pour éviter les cascading renders
+            requestAnimationFrame(() => {
+              setProfile(data.profile as SportProfile);
+              setSuggestions(restoredExercises);
+              setStep("suggestions");
+              window.history.replaceState({}, document.title, window.location.pathname);
+            });
           }
         }
       } catch (err) {

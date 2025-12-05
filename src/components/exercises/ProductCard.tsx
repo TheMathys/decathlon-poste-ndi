@@ -8,20 +8,12 @@ interface ProductCardProps {
   allProducts?: DecathlonProduct[];
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
-  product,
-  onAddToBasket,
-}) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToBasket }) => {
   const [imageError, setImageError] = useState(false);
 
   return (
     <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-green-400 hover:shadow-md transition-all duration-200 flex flex-col h-full">
-      <a
-        href={product.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block mb-3"
-      >
+      <a href={product.link} target="_blank" rel="noopener noreferrer" className="block mb-3">
         <div className="w-full h-48 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
           {imageError || !product.image || !product.image.startsWith("http") ? (
             <div className="text-4xl">📦</div>
@@ -45,9 +37,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         >
           <h5 className="font-semibold text-gray-900 mb-1">{product.name}</h5>
         </a>
-        {product.description && (
-          <p className="text-sm text-gray-600 mb-2">{product.description}</p>
-        )}
+        {product.description && <p className="text-sm text-gray-600 mb-2">{product.description}</p>}
         <p className="text-lg font-bold text-green-600 mb-3">{product.price}</p>
 
         <div className="flex flex-col gap-2 mt-auto">
@@ -88,4 +78,3 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     </div>
   );
 };
-

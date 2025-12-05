@@ -30,7 +30,7 @@ const Formulaire: React.FC<FormulaireProps> = ({ onSubmit }) => {
     setTouchedFields,
   } = useFormValidation(profile, qcmData);
 
-  useProfilePersistence(profile, defaultProfile);
+  useProfilePersistence(profile);
 
   const handleReset = () => {
     if (
@@ -65,7 +65,7 @@ const Formulaire: React.FC<FormulaireProps> = ({ onSubmit }) => {
     });
 
     return totalQuestions > 0 ? Math.round((answeredQuestions / totalQuestions) * 100) : 0;
-  }, [profile, qcmData]);
+  }, [qcmData, getValue]);
 
   const handleValueChange = (
     questionId: string,
@@ -110,7 +110,7 @@ const Formulaire: React.FC<FormulaireProps> = ({ onSubmit }) => {
         (!Array.isArray(value) || value.length > 0)
       );
     }).length;
-  }, [profile, qcmData, getValue]);
+  }, [qcmData, getValue]);
 
   const totalRequired = useMemo(() => {
     return qcmData.qcm.filter((q) => q.required).length;
@@ -118,11 +118,7 @@ const Formulaire: React.FC<FormulaireProps> = ({ onSubmit }) => {
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="decathlon-form">
-      <FormHeader
-        progress={progress}
-        answeredCount={answeredCount}
-        totalRequired={totalRequired}
-      />
+      <FormHeader progress={progress} answeredCount={answeredCount} totalRequired={totalRequired} />
       <div className="space-y-8">
         {qcmData.qcm.map((question, index) => {
           const error = getFieldError(question.id);

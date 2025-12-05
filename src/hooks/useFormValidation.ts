@@ -69,7 +69,8 @@ export function useFormValidation(profile: SportProfile, qcmData: QCMData) {
         if (error) {
           return { ...prev, [questionId]: error };
         } else {
-          const { [questionId]: _, ...rest } = prev;
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { [questionId]: _removed, ...rest } = prev;
           return rest;
         }
       });

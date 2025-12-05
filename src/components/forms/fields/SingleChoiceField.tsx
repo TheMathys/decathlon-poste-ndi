@@ -31,11 +31,7 @@ export const SingleChoiceField: React.FC<SingleChoiceFieldProps> = ({
       >
         {question.question}
       </legend>
-      <div
-        className="decathlon-radio-group"
-        role="radiogroup"
-        aria-required={question.required}
-      >
+      <div className="decathlon-radio-group" role="radiogroup" aria-required={question.required}>
         {question.options?.map((option) => (
           <div
             key={option.value}
@@ -69,4 +65,3 @@ export const SingleChoiceField: React.FC<SingleChoiceFieldProps> = ({
     </fieldset>
   );
 };
-

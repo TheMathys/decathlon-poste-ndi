@@ -3,7 +3,9 @@ import type { WeeklyProgram, ProgramStats } from "../../types/index.js";
 /**
  * Calcule les statistiques d'un programme hebdomadaire
  */
-export function calculateProgramStats(program: WeeklyProgram): ProgramStats & { daysPerWeek: number } {
+export function calculateProgramStats(
+  program: WeeklyProgram
+): ProgramStats & { daysPerWeek: number } {
   const stats: ProgramStats & { daysPerWeek: number } = {
     totalExercises: program.exercises.length,
     totalDuration: program.totalDuration,
@@ -47,8 +49,11 @@ export function formatStatsForDisplay(stats: ProgramStats) {
   return {
     ...stats,
     formattedDuration: `${Math.floor(stats.totalDuration / 60)}h${stats.totalDuration % 60}min`,
-    difficultyLabel: stats.averageDifficulty < 1.5 ? "Débutant" 
-      : stats.averageDifficulty < 2.5 ? "Intermédiaire" 
-      : "Avancé",
+    difficultyLabel:
+      stats.averageDifficulty < 1.5
+        ? "Débutant"
+        : stats.averageDifficulty < 2.5
+          ? "Intermédiaire"
+          : "Avancé",
   };
 }

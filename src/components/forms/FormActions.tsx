@@ -13,7 +13,13 @@ export const FormActions: React.FC<FormActionsProps> = ({
   submitLabel = "Générer mon programme personnalisé",
 }) => {
   const resetIcon = (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg
+      className="w-5 h-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -24,7 +30,13 @@ export const FormActions: React.FC<FormActionsProps> = ({
   );
 
   const submitIcon = (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -60,4 +72,3 @@ export const FormActions: React.FC<FormActionsProps> = ({
     </div>
   );
 };
-

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import type { SportProfile } from "../types/index.js";
 import { saveProfileToLocalStorage, getProfileFromLocalStorage } from "../utils/localStorage";
 
-export function useProfilePersistence(profile: SportProfile, _defaultProfile: SportProfile): void {
+export function useProfilePersistence(profile: SportProfile): void {
   useEffect(() => {
     saveProfileToLocalStorage(profile);
   }, [profile]);

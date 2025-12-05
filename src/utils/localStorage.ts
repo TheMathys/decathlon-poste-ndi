@@ -70,4 +70,3 @@ export function clearProfileFromLocalStorage(): void {
 export function hasStoredProfile(): boolean {
   return getProfileFromLocalStorage() !== null;
 }
-

@@ -41,12 +41,7 @@ export const NumberField: React.FC<NumberFieldProps> = ({
         {question.required && <span className="decathlon-legend-required"> *</span>}
       </label>
       <div className="decathlon-number-input-wrapper">
-        <button
-          type="button"
-          onClick={handleDecrease}
-          aria-label="Diminuer la valeur"
-          tabIndex={0}
-        >
+        <button type="button" onClick={handleDecrease} aria-label="Diminuer la valeur" tabIndex={0}>
           −
         </button>
         <input
@@ -76,4 +71,3 @@ export const NumberField: React.FC<NumberFieldProps> = ({
     </div>
   );
 };
-

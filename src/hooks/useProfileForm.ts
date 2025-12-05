@@ -48,7 +48,14 @@ export function useProfileForm(initialProfile: SportProfile) {
   );
 
   const setValue = useCallback((path: string, value: FormValue) => {
-    setProfile((prev) => setNestedValue(prev as unknown as Record<string, unknown>, path, value) as unknown as SportProfile);
+    setProfile(
+      (prev) =>
+        setNestedValue(
+          prev as unknown as Record<string, unknown>,
+          path,
+          value
+        ) as unknown as SportProfile
+    );
   }, []);
 
   const resetProfile = useCallback((newProfile: SportProfile) => {

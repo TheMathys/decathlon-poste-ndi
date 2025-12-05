@@ -13,11 +13,8 @@ export const ProgramHeader: React.FC<ProgramHeaderProps> = ({ exerciseCount }) =
         Exercices adaptés à votre profil pour prévenir les blessures
       </p>
       <div className="mt-4 flex items-center justify-center gap-2">
-        <Badge variant="info">
-          {exerciseCount} exercices recommandés
-        </Badge>
+        <Badge variant="info">{exerciseCount} exercices recommandés</Badge>
       </div>
     </div>
   );
 };
-

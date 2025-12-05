@@ -57,4 +57,3 @@ export const BooleanField: React.FC<BooleanFieldProps> = ({
     </div>
   );
 };
-

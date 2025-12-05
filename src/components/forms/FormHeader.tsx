@@ -22,24 +22,14 @@ export const FormHeader: React.FC<FormHeaderProps> = ({
       <div className="mt-3 p-2 bg-blue-50 border border-blue-200 rounded-lg">
         <p className="text-xs text-blue-700 flex items-center gap-2">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 13l4 4L19 7"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
           Votre progression est sauvegardée automatiquement
         </p>
       </div>
 
       <div className="mt-6">
-        <ProgressBar
-          value={progress}
-          max={100}
-          showPercentage
-          label="Progression"
-        />
+        <ProgressBar value={progress} max={100} showPercentage label="Progression" />
         <p className="text-xs text-gray-500 mt-2">
           {answeredCount} / {totalRequired} questions requises complétées
         </p>
@@ -47,4 +37,3 @@ export const FormHeader: React.FC<FormHeaderProps> = ({
     </div>
   );
 };
-

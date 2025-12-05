@@ -6,11 +6,7 @@ interface BadgeProps {
   className?: string;
 }
 
-export const Badge: React.FC<BadgeProps> = ({
-  children,
-  variant = "default",
-  className = "",
-}) => {
+export const Badge: React.FC<BadgeProps> = ({ children, variant = "default", className = "" }) => {
   const baseClasses = "px-3 py-1 rounded-full text-sm font-semibold";
 
   const variantClasses = {
@@ -23,9 +19,6 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   return (
-    <span className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
-    </span>
+    <span className={`${baseClasses} ${variantClasses[variant]} ${className}`}>{children}</span>
   );
 };
-

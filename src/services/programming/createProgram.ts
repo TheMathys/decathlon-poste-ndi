@@ -1,4 +1,11 @@
-import type { ScoredExercise, SportProfile, WeeklyProgram, ProgrammedExercise, ExerciseSet, Niveau } from "../../types/index.js";
+import type {
+  ScoredExercise,
+  SportProfile,
+  WeeklyProgram,
+  ProgrammedExercise,
+  ExerciseSet,
+  Niveau,
+} from "../../types/index.js";
 
 /**
  * Calcule les séries et répétitions selon le niveau et la fréquence
@@ -9,7 +16,8 @@ function calculateSetsAndReps(
   frequence: "0" | "1" | "2_3" | "4_plus",
   age: number | null
 ): ExerciseSet {
-  const isIsometric = exercise.name.toLowerCase().includes("plank") ||
+  const isIsometric =
+    exercise.name.toLowerCase().includes("plank") ||
     exercise.name.toLowerCase().includes("wall sit") ||
     exercise.name.toLowerCase().includes("hollow") ||
     exercise.name.toLowerCase().includes("gainage");
@@ -74,7 +82,7 @@ function distributeExercises(
   frequence: "0" | "1" | "2_3" | "4_plus"
 ): Map<number, ScoredExercise[]> {
   const distribution = new Map<number, ScoredExercise[]>();
-  
+
   let daysPerWeek = 2;
   if (frequence === "1") daysPerWeek = 3;
   else if (frequence === "2_3") daysPerWeek = 4;
@@ -90,7 +98,7 @@ function distributeExercises(
   exercises.forEach((exercise, index) => {
     const dayIndex = index % days.length;
     const day = days[dayIndex];
-    
+
     if (!distribution.has(day)) {
       distribution.set(day, []);
     }
@@ -105,20 +113,20 @@ function distributeExercises(
  */
 function calculateSessionDuration(exercises: ProgrammedExercise[]): number {
   let totalSeconds = 0;
-  
+
   exercises.forEach((exercise, index) => {
     const { sets, reps, restSeconds } = exercise.sets;
-    
+
     // Temps d'exécution estimé par répétition (2 secondes pour dynamique, temps pour isométrique)
-    const timePerRep = typeof exercise.sets.reps === "string" 
-      ? parseInt(exercise.sets.reps) || 30 
-      : 2;
-    
-    const exerciseTime = sets * (typeof reps === "string" ? parseInt(reps) || 30 : reps * timePerRep);
+    const timePerRep =
+      typeof exercise.sets.reps === "string" ? parseInt(exercise.sets.reps) || 30 : 2;
+
+    const exerciseTime =
+      sets * (typeof reps === "string" ? parseInt(reps) || 30 : reps * timePerRep);
     const restTime = (sets - 1) * restSeconds; // Pas de repos après la dernière série
-    
+
     totalSeconds += exerciseTime + restTime;
-    
+
     // Transition entre exercices (30 secondes sauf le dernier)
     if (index < exercises.length - 1) {
       totalSeconds += 30;
@@ -127,7 +135,7 @@ function calculateSessionDuration(exercises: ProgrammedExercise[]): number {
 
   // Échauffement (5 min) + retour au calme (3 min)
   totalSeconds += 480;
-  
+
   return Math.ceil(totalSeconds / 60);
 }
 
@@ -148,7 +156,7 @@ export function createWeeklyProgram(
   distribution.forEach((dayExercises, dayOfWeek) => {
     dayExercises.forEach((exercise, order) => {
       const sets = calculateSetsAndReps(exercise, niveau, frequence, age);
-      
+
       programmedExercises.push({
         ...exercise,
         sets,

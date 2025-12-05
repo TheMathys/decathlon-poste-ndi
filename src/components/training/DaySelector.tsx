@@ -19,7 +19,7 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
   // Grouper les exercices par jour
   const exercisesByDay = React.useMemo(() => {
     const grouped = new Map<number, typeof program.exercises>();
-    
+
     program.exercises.forEach((exercise) => {
       if (!grouped.has(exercise.dayOfWeek)) {
         grouped.set(exercise.dayOfWeek, []);
@@ -28,7 +28,7 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
     });
 
     return grouped;
-  }, [program.exercises]);
+  }, [program]);
 
   const getCurrentDayOfWeek = () => {
     const today = new Date().getDay();
@@ -71,17 +71,21 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
             const isToday = dayOfWeek === currentDay;
             const isSelected = selectedDay === dayOfWeek;
             const exerciseCount = exercises.length;
+            const hasExercises = exerciseCount > 0;
 
             return (
               <button
                 key={dayOfWeek}
-                onClick={() => onSelectDay(dayOfWeek)}
+                onClick={() => hasExercises && onSelectDay(dayOfWeek)}
+                disabled={!hasExercises}
                 className={`relative p-4 rounded-lg border-2 transition-all duration-200 ${
-                  isSelected
-                    ? "border-blue-600 bg-blue-50 shadow-md scale-105"
-                    : isToday
-                    ? "border-orange-300 bg-orange-50 hover:border-orange-400"
-                    : "border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50"
+                  !hasExercises
+                    ? "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed"
+                    : isSelected
+                      ? "border-blue-600 bg-blue-50 shadow-md scale-105"
+                      : isToday
+                        ? "border-orange-300 bg-orange-50 hover:border-orange-400"
+                        : "border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50"
                 }`}
               >
                 {isToday && (
@@ -91,9 +95,13 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
                 )}
                 <div className="text-center">
                   <div className="text-sm font-semibold text-gray-600 mb-1">{DAYS[dayOfWeek]}</div>
-                  <div className="text-2xl font-bold text-gray-900 mb-1">{exerciseCount}</div>
-                  <div className="text-xs text-gray-500">
-                    exercice{exerciseCount > 1 ? "s" : ""}
+                  <div
+                    className={`text-2xl font-bold mb-1 ${hasExercises ? "text-gray-900" : "text-gray-400"}`}
+                  >
+                    {exerciseCount}
+                  </div>
+                  <div className={`text-xs ${hasExercises ? "text-gray-500" : "text-gray-400"}`}>
+                    {hasExercises ? `exercice${exerciseCount > 1 ? "s" : ""}` : "Aucun exercice"}
                   </div>
                 </div>
               </button>
@@ -104,9 +112,7 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
       {selectedDay !== null && selectedDayExercises.length > 0 && (
         <div className="bg-blue-50 rounded-lg p-4 mb-4 border border-blue-200">
           <div className="flex items-center justify-between mb-3">
-            <h4 className="font-semibold text-blue-900">
-              Programme du {DAYS[selectedDay]}
-            </h4>
+            <h4 className="font-semibold text-blue-900">Programme du {DAYS[selectedDay]}</h4>
             <span className="text-sm text-blue-700 bg-blue-100 px-3 py-1 rounded-full font-semibold">
               {selectedDayExercises.length} exercice{selectedDayExercises.length > 1 ? "s" : ""}
             </span>
@@ -131,14 +137,14 @@ export const DaySelector: React.FC<DaySelectorProps> = ({
 
       <button
         onClick={onStartTraining}
-        disabled={selectedDay === null}
+        disabled={selectedDay === null || selectedDayExercises.length === 0}
         className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-200 ${
-          selectedDay !== null
+          selectedDay !== null && selectedDayExercises.length > 0
             ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:scale-105"
             : "bg-gray-200 text-gray-400 cursor-not-allowed"
         }`}
       >
-        {selectedDay !== null ? (
+        {selectedDay !== null && selectedDayExercises.length > 0 ? (
           <>
             <span className="mr-2">🏋️</span>
             Démarrer l'entraînement du {DAYS[selectedDay]}

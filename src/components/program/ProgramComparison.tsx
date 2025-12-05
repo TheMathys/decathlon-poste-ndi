@@ -1,6 +1,9 @@
 import React from "react";
 import type { WeeklyProgram } from "../../types/index.js";
-import { calculateProgramStats, formatStatsForDisplay } from "../../services/programming/calculateStats";
+import {
+  calculateProgramStats,
+  formatStatsForDisplay,
+} from "../../services/programming/calculateStats";
 
 interface ProgramComparisonProps {
   programA: WeeklyProgram;
@@ -69,9 +72,12 @@ export const ProgramComparison: React.FC<ProgramComparisonProps> = ({
           const diff = item.valueB - item.valueA;
           const diffPercent = item.valueA > 0 ? ((diff / item.valueA) * 100).toFixed(0) : "0";
           const formatValue = item.format || ((val: number | string) => val.toString());
-          
+
           return (
-            <div key={index} className="grid grid-cols-3 gap-4 items-center p-3 bg-gray-50 rounded-lg">
+            <div
+              key={index}
+              className="grid grid-cols-3 gap-4 items-center p-3 bg-gray-50 rounded-lg"
+            >
               <div className="text-center">
                 <div className="text-lg font-bold text-blue-600">
                   {formatValue(item.valueA)}
@@ -104,41 +110,47 @@ export const ProgramComparison: React.FC<ProgramComparisonProps> = ({
       <div className="mt-6 pt-6 border-t border-gray-200">
         <h4 className="font-semibold text-gray-900 mb-4">Répartition par catégorie</h4>
         <div className="space-y-3">
-          {Object.keys({ ...statsA.exercisesByCategory, ...statsB.exercisesByCategory }).map((category) => {
-            const countA = statsA.exercisesByCategory[category] || 0;
-            const countB = statsB.exercisesByCategory[category] || 0;
-            const diff = countB - countA;
+          {Object.keys({ ...statsA.exercisesByCategory, ...statsB.exercisesByCategory }).map(
+            (category) => {
+              const countA = statsA.exercisesByCategory[category] || 0;
+              const countB = statsB.exercisesByCategory[category] || 0;
+              const diff = countB - countA;
 
-            return (
-              <div key={category} className="flex items-center justify-between">
-                <span className="text-sm capitalize text-gray-700 w-32">
-                  {category.replace(/_/g, " ")}
-                </span>
-                <div className="flex-1 flex items-center gap-2">
-                  <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-blue-500 rounded-full"
-                      style={{ width: `${Math.min((countA / Math.max(statsA.totalExercises, 1)) * 100, 100)}%` }}
-                    />
+              return (
+                <div key={category} className="flex items-center justify-between">
+                  <span className="text-sm capitalize text-gray-700 w-32">
+                    {category.replace(/_/g, " ")}
+                  </span>
+                  <div className="flex-1 flex items-center gap-2">
+                    <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-blue-500 rounded-full"
+                        style={{
+                          width: `${Math.min((countA / Math.max(statsA.totalExercises, 1)) * 100, 100)}%`,
+                        }}
+                      />
+                    </div>
+                    <div className="text-xs text-gray-600 w-12 text-center">{countA}</div>
                   </div>
-                  <div className="text-xs text-gray-600 w-12 text-center">{countA}</div>
-                </div>
-                <div className="text-xs font-semibold text-gray-600 w-12 text-center">
-                  {diff > 0 ? "+" : ""}
-                  {diff}
-                </div>
-                <div className="flex-1 flex items-center gap-2">
-                  <div className="text-xs text-gray-600 w-12 text-center">{countB}</div>
-                  <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-indigo-500 rounded-full"
-                      style={{ width: `${Math.min((countB / Math.max(statsB.totalExercises, 1)) * 100, 100)}%` }}
-                    />
+                  <div className="text-xs font-semibold text-gray-600 w-12 text-center">
+                    {diff > 0 ? "+" : ""}
+                    {diff}
+                  </div>
+                  <div className="flex-1 flex items-center gap-2">
+                    <div className="text-xs text-gray-600 w-12 text-center">{countB}</div>
+                    <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-indigo-500 rounded-full"
+                        style={{
+                          width: `${Math.min((countB / Math.max(statsB.totalExercises, 1)) * 100, 100)}%`,
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
     </div>
