@@ -67,7 +67,7 @@ Une application web moderne qui aide les utilisateurs à prévenir les blessures
 
 ```bash
 git clone https://github.com/TheMathys/decathlon-poste-ndi
-cd decathlon
+cd decathlon-poste-ndi
 ```
 
 2. **Installer les dépendances** :
